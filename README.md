@@ -1,5 +1,5 @@
 # BaboonStress
-This repo contains data and scripts for "Developmental Instability in Wild Nigerian Olive Baboons".
+This repo contains data and scripts for "Developmental Instability in Wild Nigerian Olive Baboons". A PDF of a revised and resubmitted version (accepted for publication 20 June 2021) is also located here.
 
 The exact methods used are described in detail in a step-by-step guide: Palmer AR, and Strobeck C. 2003. Fluctuating asymmetry analysis: A step-by-step example. In: Polak M, ed. Developmental Instability: Causes and Consequences. Oxford: Oxford University Press, V1-B36.
 
