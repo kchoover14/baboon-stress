@@ -1,4 +1,4 @@
-coptions(prompt="R>", scipen=100, digits=4)
+options(prompt="R>", scipen=100, digits=4)
 
 #This script test ME variance across length v breadth and toothclass.
 
