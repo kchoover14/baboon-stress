@@ -48,13 +48,16 @@ mlright$Side=NULL
 #convert wide to long
 mlllong=gather(mlleft, var, val, mnm1av:mxp4av, factor_key=TRUE)
 mlrlong=gather(mlright, var, val, mnm1av:mxp4av, factor_key=TRUE)
+
 sdplots= merge(mlllong, mlrlong, by= c("Ind", "var"))
 colnames(sdplots)[colnames(sdplots)=="val.x"] <- "val.left"
 colnames(sdplots)[colnames(sdplots)=="val.y"] <- "val.right"
 sdplots.noNA=na.omit(sdplots)
+
 sdplots.noNA$diff= sdplots.noNA$val.right - sdplots.noNA$val.left
 sdplots.noNA$val.left=NULL
 sdplots.noNA$val.right=NULL
+
 sdplots_wide= spread(sdplots.noNA, var, diff)
 sdplots_wide= spread(sdplots.noNA, var, diff)
 colnames(sdplots_wide)[colnames(sdplots_wide)=="mnm1av"] <- "mnm1_sd"

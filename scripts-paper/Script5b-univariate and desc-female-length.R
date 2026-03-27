@@ -4,7 +4,7 @@ options(prompt="R>", scipen=100, digits=4)
 
 #univariates
 library(readxl)
-feml=read_excel("0-reps-10-postFA.xlsx", sheet="female-lengths")
+feml=read_excel("data-original/2-after fa elimination.xlsx", sheet="female-lengths")
 cat(paste("\n", "MNM1", "\n"))
 summary(aov(mnm1 ~ Side + Side*Ind + Error(Ind/(Side*Ind)), data=feml))
 cat(paste("\n", 'MNM2', "\n"))
@@ -66,6 +66,7 @@ fl1$mxp3=NULL
 fl1$mxp4=NULL
 fl1$Rep=NULL
 
+#f1 retains left and right sides
 #SKEW and KURTOSIS
 library(DescTools)
 library(readxl)
@@ -105,6 +106,7 @@ cat(paste("\n", "MXP3 KURTOSIS", "\n"))
 Kurt(fl1$mxp3av, na.rm = TRUE, method = 1)
 cat(paste("\n", "MXP4 KURTOSIS", "\n"))
 Kurt(fl1$mxp4av, na.rm = TRUE, method = 1)
+
 
 #Get sd and average sd
 flleft= fl1[fl1$Side=="L", ]

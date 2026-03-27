@@ -1,33 +1,51 @@
-# BaboonStress
-This repo contains data and scripts for "Developmental Instability in Wild Nigerian Olive Baboons". A PDF of a revised and resubmitted version (accepted for publication 20 June 2021) is also located here.
+## Developmental Instability in Wild Nigerian Olive Baboons
 
-The exact methods used are described in detail in a step-by-step guide: Palmer AR, and Strobeck C. 2003. Fluctuating asymmetry analysis: A step-by-step example. In: Polak M, ed. Developmental Instability: Causes and Consequences. Oxford: Oxford University Press, V1-B36.
+This study analyzes dental fluctuating asymmetry (FA) in a natural death sample of olive baboons (*Papio anubis*) from Gashaka Gumti National Park, Nigeria -- an ecological outlier population living in the wettest habitat of any studied baboon group. Using the FA10b index across permanent premolar and molar dentition, the analysis tests whether baboons show human-like FA trends by tooth dimension and class, and whether weaning or reproductive onset represent periods of elevated developmental instability. Lengths carry significantly greater FA than breadths in both sexes, mirroring the human pattern, and premolar lengths show the highest values overall. Neither weaning nor reproductive onset produces elevated FA; instead, the juvenile period between these life history stages -- indexed by fourth premolar FA -- emerges as the most developmentally demanding phase.
 
-### Data Cleaning for Outliers
-The zero level script, prefixed Script0, generates univariate measurements that have to be entered into the PS worksheet noted at the start of the script.
-Unfortunately this work is done by hand to follow the PS method of using the spreadsheet. A goal for the future is to create the evaluation in the PS worksheet in R to avoid the potential for introducing errors via handwork.
+### Published Paper
 
-Scripts are batched by leading numbers. The first script, prefixed Script1, tests the data for the normal distribution.
+Hoover, K.C., Gelipter, E., Sommer, V., & Kovarovic, K. (2021). Developmental instability in wild Nigerian olive baboons (*Papio anubis*). *PeerJ*, 9, e11832. DOI: [10.7717/peerj.11832](https://doi.org/10.7717/peerj.11832)
 
-The second batch of scripts, prefixed by 2 then followed by a letter, assess measurement error (ME) on each set of measurements noted at the start of the script. There is a note in the scripts, when taking replicate differences, that a function would have worked better. Ultimately, the script works just fine but would be much better as a function for others to use (so a future goal!). The removal of outliers is done by hand. I didn't have a way to automate this but that would be ideal for, again, avoiding the introduction of errors via hand work.
+### Repository Contents
 
-The third script test for trait size asymmetry (TSA) via scatterplots for visual inspection and confirmed by Rosner's ESD test. Again, handwork to remove outliers occurs at this stage to produce the next dataframe.
+This repo contains two sets of files. All files prefixed `revised-` are revised scripts and figures from the original publication. Revisions offer a fully reproducible end-to-end pipeline from raw data through ETL to results - including data cleaning and wrangling scripts (revised from originals or created where none existed), code modernization, and the addition of environment management to future-proof the revised scripts. All other files are associated with the original publication. Occasionally, an original script may be updated with annotations for clarity; the commit history will note any such changes.
 
-The fourth batch of scripts examine trait size differences for fluctuating asymmetry.
+#### Original files
 
-### Using cleaned data, these scripts generate values for the PS Worksheet, which will be used for data exploration and hypothesis testing
-The fifth batch of scripts generate descriptive and univariate values for the ps worksheet.
+Original publication scripts are organized in `paper-scripts/` and original data files in `paper-data/`. The original pipeline followed the Palmer and Strobeck (2003) step-by-step protocol using a combination of R scripts and manual data entry into the PS Excel worksheet. Scripts are batched by leading numbers: Script1 tests for normality; Script2 batches assess ME per measurement set; Script3 tests for trait size asymmetry via scatterplots and Rosner's ESD; Script4 examines trait size differences for FA; Script5 generates descriptive and univariate values for the PS worksheet; Script6 reassesses ME on the cleaned dataset; Script7 tests trait size dependency via correlation; Script8 explores human FA trends and tests hypotheses; Script9 generates plots. Raw data files are suffixed `EG data`; processed data files are prefixed by step number.
 
-The sixth batch of scripts is similar to the second batch b/c it assesses measurement error but, this time, on the cleaned dataset with no outliers. The final script in this batch (e) checks the variance of ME between length v breadths and across tooth classes. This is a check to see if the ME variance is not significantly different and pooling of all teeth into one dataset is acceptable.
+#### Revised files
 
-The seventh script tests for trait size dependency via correlation on the final dataset.
+The revised pipeline replaces the original Excel-dependent workflow with a fully automated R pipeline. Scripts are in `scripts-revised/`:
 
-### The data exploration, hypothesis testing, and plots all derive from the final dataset derived from the PS Worksheet based on cleaned data.
-The eighth script explores baboon data trends in FA with those reported in humans and tests hypotheses using the Levene test. The data for this test are derived from the PS Worksheet, which is included in this repository.
+- `revised1-wrangling.R` -- converts raw Excel replicate sheets to pipeline-ready long-format CSV
+- `revised2-inspection.R` -- ME assessment, outlier removal, DA and antisymmetry tests, trait size dependency, and FA10b calculation; uses `fa-functions.R` and `fa-constants.R`
+- `revised3-analysis.R` -- FA10b trends, human trends exploration, hypothesis testing, life history, and figure generation
+- `revised-analysis-paper-data.R` -- replicates the published paper scripts with modernized code and environment capture
+- `fa-functions.R` -- shared functions used across inspection and analysis scripts
+- `fa-constants.R` -- shared file path constants and pipeline decision parameters
 
-The ninth batch of scripts generate the plots.
+### Portfolio Page
 
-## Data Files
-Raw data are suffixed by *EG data*
-Additional data files include the first for data processing prefixed by a 0 and then subsequent datasets after removal of bad data identified by processes in the scripts.
+The [portfolio page](https://kchoover14.github.io/baboon-stress) includes a full project narrative, key findings, and figures.
 
+### Tools & Technologies
+
+**Languages** | R
+
+**Tools** | RStudio | GitHub
+
+**Packages** | dplyr | tidyr | readr | readxl | openxlsx | ggplot2 | ggridges | gridExtra | cowplot | plotly | htmlwidgets | car | outliers | DescTools | Hmisc | coin
+
+**Environment**
+
+- `renv.lock` and `renv/` -- restore with `renv::restore()`
+
+### Expertise
+
+Variance-based statistical methods applied to biological signal extraction in noisy field data, including multi-stage measurement error assessment, data quality screening, and reproducible pipeline design.
+
+### License
+
+- Code and scripts are licensed under the [MIT License](LICENSE).
+- Data, figures, and written content © Kara C. Hoover, licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).

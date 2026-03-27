@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kara C. Hoover">
+
+<title>Developmental Instability in Wild Nigerian Olive Baboons (Papio anubis)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="baboon-stress_files/libs/clipboard/clipboard.min.js"></script>
+<script src="baboon-stress_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="baboon-stress_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="baboon-stress_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="baboon-stress_files/libs/quarto-html/popper.min.js"></script>
+<script src="baboon-stress_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="baboon-stress_files/libs/quarto-html/anchor.min.js"></script>
+<link href="baboon-stress_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="baboon-stress_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="baboon-stress_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="baboon-stress_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="baboon-stress_files/libs/bootstrap/bootstrap-ec1ddf1e842b7d96aecf40c846089502.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="eggplant quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary">Executive Summary</a></li>
+  <li><a href="#research-questions" id="toc-research-questions" class="nav-link" data-scroll-target="#research-questions">Research Questions</a></li>
+  <li><a href="#research-answers" id="toc-research-answers" class="nav-link" data-scroll-target="#research-answers">Research Answers</a>
+  <ul class="collapse">
+  <li><a href="#did-the-changes-to-the-pipeline-undermine-the-paper-findings" id="toc-did-the-changes-to-the-pipeline-undermine-the-paper-findings" class="nav-link" data-scroll-target="#did-the-changes-to-the-pipeline-undermine-the-paper-findings">Did the changes to the pipeline undermine the paper findings?</a></li>
+  <li><a href="#is-there-a-pattern-of-sex-differences-in-fa" id="toc-is-there-a-pattern-of-sex-differences-in-fa" class="nav-link" data-scroll-target="#is-there-a-pattern-of-sex-differences-in-fa">Is there a pattern of sex differences in FA?</a></li>
+  <li><a href="#is-the-juvenile-period-p4-more-stressful-than-other-life-history-stages" id="toc-is-the-juvenile-period-p4-more-stressful-than-other-life-history-stages" class="nav-link" data-scroll-target="#is-the-juvenile-period-p4-more-stressful-than-other-life-history-stages">Is the juvenile period (P4) more stressful than other life history stages?</a></li>
+  <li><a href="#are-there-sex-differences-in-fa-during-weaning-when-excluding-p4" id="toc-are-there-sex-differences-in-fa-during-weaning-when-excluding-p4" class="nav-link" data-scroll-target="#are-there-sex-differences-in-fa-during-weaning-when-excluding-p4">Are there sex differences in FA during weaning when excluding P4?</a></li>
+  <li><a href="#are-there-sex-differences-in-fa-during-the-onset-of-reproduction-when-excluding-p4" id="toc-are-there-sex-differences-in-fa-during-the-onset-of-reproduction-when-excluding-p4" class="nav-link" data-scroll-target="#are-there-sex-differences-in-fa-during-the-onset-of-reproduction-when-excluding-p4">Are there sex differences in FA during the onset of reproduction when excluding P4?</a></li>
+  </ul></li>
+  <li><a href="#study-design" id="toc-study-design" class="nav-link" data-scroll-target="#study-design">Study Design</a></li>
+  <li><a href="#project-resources" id="toc-project-resources" class="nav-link" data-scroll-target="#project-resources">Project Resources</a></li>
+  <li><a href="#tools-technologies" id="toc-tools-technologies" class="nav-link" data-scroll-target="#tools-technologies">Tools &amp; Technologies</a></li>
+  <li><a href="#expertise" id="toc-expertise" class="nav-link" data-scroll-target="#expertise">Expertise</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Developmental Instability in Wild Nigerian Olive Baboons (Papio anubis)</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">biological anthropology</div>
+    <div class="quarto-category">primatology</div>
+    <div class="quarto-category">developmental biology</div>
+    <div class="quarto-category">fluctuating asymmetry</div>
+    <div class="quarto-category">life history</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kara C. Hoover </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="executive-summary" class="level2">
+<h2 class="anchored" data-anchor-id="executive-summary">Executive Summary</h2>
+<p><strong>Problem:</strong> Developmental instability – the failure of an organism to buffer its growth against genetic and environmental stressors – leaves permanent records in hard tissues. Dental fluctuating asymmetry (FA) is an established proxy for this instability, but data on non-human primates are sparse and rarely examine sex-based differences or life history phases. Baboons at Gashaka Gumti National Park (GGNP) in northeastern Nigeria represent an ecological outlier: they inhabit the wettest and most humid habitat of any studied baboon group, experience pronounced seasonal nutritional and thermoregulatory stress, and live in unusually small troops. This population offers a rare opportunity to examine FA in a wild primate under elevated environmental pressure.</p>
+<p><strong>Approach:</strong> We analyzed permanent dentition from a collection of 111 adult baboon skulls collected as a natural death sample at GGNP between 2008 and 2013. After excluding subadults, unprovenanced females, and specimens displaying extensive wear, damage, or a significant lack of antimeric teeth, an analytical sample of 81 individuals with antimeric tooth pairs remained. After excluding P3 due to its involvement in the canine honing complex, the final sample consisted of 36 adult males and 32 adult females. On the final variable set, we used the FA10b index – a ME-corrected, log-transformed measure of FA magnitude – to explore whether baboons show similar FA trends as found in human teeth and to test hypotheses about developmental stress using Levene’s test.</p>
+<p><strong>Insights:</strong> Baboon dental FA mirrors the human pattern: lengths carry greater developmental instability than breadths across all traits and both sexes, with breadths clustering near zero and contributing little discriminatory power. The biological signal is in the lengths, and premolar lengths are the highest of all – significantly greater than molar lengths in both sexes. This identifies the juvenile period between weaning and reproductive onset as the most developmentally demanding life history phase in this population, a finding not anticipated by the original hypotheses. Males trend toward higher FA10b than females across nearly all teeth, consistent with the harder and shorter lives of male baboons, though sample sizes preclude formal statistical testing at the individual tooth level. Neither weaning nor reproductive onset produces significantly elevated FA when premolars are excluded from the comparison for females but there is a trend towards higher FA at these times in males.</p>
+<p><strong>Significance:</strong> This study provides the first dental FA data for baboons and contributes to a growing comparative primate dataset needed to understand how sex, life history, and habitat shape developmental instability. The identification of the juvenile period – not weaning or reproductive onset – as the primary developmental stressor shifts attention to the poorly understood challenges of early independent life in baboons and raises questions about whether this pattern holds across populations with different ecological pressures. The finding that the sex difference is carried by lengths rather than overall FA magnitude has methodological implications: dimension-blind analyses may mask biologically meaningful signals in primate dental FA research. The GGNP population, as an extreme ecological outlier, offers a high-stress baseline for future comparative work. High ME variability across baboon teeth may also reflect unique morphological challenges in measurement that warrant attention in future cercopithecine FA research.</p>
+<p><strong>Key Findings</strong></p>
+<ul>
+<li>The revised pipeline largely upholds the original paper findings; sex differences, previously found to be significant overall, are confirmed when testing by dimension and sex.</li>
+<li>Length measurements carry significantly greater FA than breadths across all traits and both sexes, mirroring the human dental FA pattern; breadths are uniformly low.</li>
+<li>Premolar lengths are significantly higher than molar lengths in both pooled and length-only tests, identifying the juvenile period between weaning and reproduction as the most developmentally demanding phase.</li>
+<li>Males trend toward higher FA10b than females across nearly all teeth, though sample sizes preclude formal testing at the individual tooth level.</li>
+<li>Neither weaning nor reproductive onset produces significantly elevated FA when the juvenile period (P4) is excluded from comparisons for females but males tend slightly higher.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Hoover, K.C., Gelipter, E., Sommer, V., &amp; Kovarovic, K. (2021). Developmental instability in wild Nigerian olive baboons (<em>Papio anubis</em>). <em>PeerJ</em>, 9, e11832. DOI: <a href="https://doi.org/10.7717/peerj.11832">10.7717/peerj.11832</a></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="research-questions" class="level2">
+<h2 class="anchored" data-anchor-id="research-questions">Research Questions</h2>
+<ol type="1">
+<li><p>Did the changes to the pipeline undermine the paper findings?</p></li>
+<li><p>Is there a pattern of sex differences in FA?</p></li>
+<li><p>Is the juvenile period (P4) more stressful than other life history stages?</p></li>
+<li><p>Is weaning more stressful than other life history stages when excluding P4?</p></li>
+<li><p>Are there sex differences in FA during the onset of reproduction when excluding P4?</p></li>
+</ol>
+<hr>
+</section>
+<section id="research-answers" class="level2">
+<h2 class="anchored" data-anchor-id="research-answers">Research Answers</h2>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>This Analysis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The revised pipeline replaced the original workflow with a fully R-based three-script pipeline with user checkpoints. The original wrangled data from field-collection sheets in Excel for input into R with manual removal of flagged replicates or variables and used the Excel-based Palmer and Strobeck (2005) mixed model ANOVA to generate FA10a values. The revised pipeline guards against copy/paste and sorting errors from the original Excel-based workflow. The revised pipeline also replaces Rosner’s ESD with Dixon’s test as per the Palmer and Strobeck protocol, and updates the calculation of skew and kurtosis to use side differences rather than averaged replicates. There was minimal impact to the major findings of the original paper other than fewer removals in Steps 1-5, which had the downstream effect of a significant trait size difference for one variable in Step 8 (handled by using FA10b, log transformation on raw measurements) and no variable exceeding the DA threshold in Step 9, allowing a larger analytical dataset to replicate the original findings and explore new ones.</p>
+</div>
+</div>
+<section id="did-the-changes-to-the-pipeline-undermine-the-paper-findings" class="level3">
+<h3 class="anchored" data-anchor-id="did-the-changes-to-the-pipeline-undermine-the-paper-findings">Did the changes to the pipeline undermine the paper findings?</h3>
+<p>The original findings are largely upheld. See <code>scripts-revised/</code> for the two scripts that compare paper data to revised data using the same analytical workflow, and see Study Design for a discussion of what changed in the data feeding into hypothesis testing. The original finding of overall sex differences did not replicate in the revised data, but sex differences are confirmed when testing by dimension and sex (Table 1). Human trends results were the same for dimension but with the addition of a new significant finding for class. Life history testing had the same result as the paper – no significant findings.</p>
+<p>Baboon FA mirrors the human pattern: length FA10b values are significantly higher than breadth values, and premolar lengths are the highest values for both sexes and higher in males. Arcade (maxillary vs.&nbsp;mandibular) did not differ significantly.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Test</th>
+<th>F</th>
+<th>df1</th>
+<th>df2</th>
+<th>p</th>
+<th>sig</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>class</td>
+<td>39.09</td>
+<td>1</td>
+<td>28</td>
+<td>&lt; 0.001</td>
+<td>*</td>
+</tr>
+<tr class="even">
+<td>arcade</td>
+<td>1.94</td>
+<td>1</td>
+<td>28</td>
+<td>0.175</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>dimension</td>
+<td>14.38</td>
+<td>1</td>
+<td>28</td>
+<td>0.001</td>
+<td>*</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Figure 1. FA10b by tooth dimension (breadth vs.&nbsp;length) across traits and sex.</strong></p>
+<p><img src="revised-fig-dimension.png" class="img-fluid"></p>
+<p><strong>Figure 2. Side difference (R-L) distributions by sex and dimension.</strong></p>
+<p><img src="revised-fig-ridgeline.png" class="img-fluid"></p>
+<p><strong>Interpretation:</strong> Breadth values exhibit ideal distributions for FA – tight, leptokurtic peaks centered on zero. Lengths exhibit longer tails indicating more extreme FA values, with male length showing the longest tails and most platykurtic distribution of the four groups.</p>
+<hr>
+</section>
+<section id="is-there-a-pattern-of-sex-differences-in-fa" class="level3">
+<h3 class="anchored" data-anchor-id="is-there-a-pattern-of-sex-differences-in-fa">Is there a pattern of sex differences in FA?</h3>
+<p>Elevated stress has been documented in GGNP females via fecal glucocorticoid but no comparable data exist for males. Male and female FA10b values overlap (Figure 3) but there is a slight trend for male values to be higher across nearly all teeth, suggesting that males experience greater developmental instability across the lifespan. FA10b is an index computed across all individuals per tooth, so sample sizes preclude formal statistical testing at the individual tooth level. For both sexes, premolar lengths are the highest values.</p>
+<p><strong>Figure 3. FA10b deviation from group mean by tooth and dimension, colored by sex.</strong></p>
+<p><img src="revised-fig-sexDifferences.png" class="img-fluid"></p>
+<p><strong>Interpretation:</strong> Males trend to slightly higher FA10b in nearly all teeth, suggesting generally greater developmental instability across the lifespan. The social biology of male baboons supports this pattern – males leave their birth groups, establish themselves in a new dominance hierarchy through competitive and often violent interactions, face higher predation risk as solitary individuals during dispersal, and have developmental pathways that may be compromised by testosterone-linked immunosuppression and male-biased prenatal complications.</p>
+<hr>
+</section>
+<section id="is-the-juvenile-period-p4-more-stressful-than-other-life-history-stages" class="level3">
+<h3 class="anchored" data-anchor-id="is-the-juvenile-period-p4-more-stressful-than-other-life-history-stages">Is the juvenile period (P4) more stressful than other life history stages?</h3>
+<p>Given the pattern of higher FA10b in premolar lengths, we tested whether the juvenile period – the stage during which P4 develops, between weaning and reproductive onset – is more developmentally demanding than other life history stages. Premolar lengths are significantly higher than molar lengths in both pooled and length-only tests (Table 1). Figure 4 shows a clear separation between premolars and molars with no overlap at the upper end of the distribution.</p>
+<p><strong>Figure 4. FA10b by tooth position, showing premolar vs.&nbsp;molar lengths by sex.</strong></p>
+<p><img src="revised-fig-premolarL.png" class="img-fluid"></p>
+<p><strong>Interpretation:</strong> Premolar lengths are substantially higher than molar lengths across both sexes, with male premolars showing the highest values. This pattern identifies the juvenile period between weaning and reproductive onset as the most developmentally demanding phase in this population – a finding not anticipated by the original hypotheses and one that redirects attention from the life history transitions themselves toward the sustained challenges of early independent life.</p>
+<hr>
+</section>
+<section id="are-there-sex-differences-in-fa-during-weaning-when-excluding-p4" class="level3">
+<h3 class="anchored" data-anchor-id="are-there-sex-differences-in-fa-during-weaning-when-excluding-p4">Are there sex differences in FA during weaning when excluding P4?</h3>
+<p>First molars develop during the weaning window (suckling ceases ~15 months; M1 erupts ~19.5 months), making them an excellent proxy for weaning stress. When premolars are excluded from the comparison, there are no significant differences in FA between M1 and other molar teeth, in either the pooled or length-only test (Table 1). Figure 5 suggests that males may experience greater stress during weaning than females, as evidenced by higher FA10b values for first molars, but this trend does not reach significance.</p>
+<p><strong>Figure 5. FA10b deviation from group mean comparing first molar to other molar teeth (excluding P4).</strong></p>
+<p><img src="revised-fig-weaning.png" class="img-fluid"></p>
+<p><strong>Interpretation:</strong> Weaning is not a uniquely stressful period relative to other molar life history stages. Males trend slightly higher than females during this period, consistent with the broader pattern of male developmental instability, but the difference is not significant.</p>
+<hr>
+</section>
+<section id="are-there-sex-differences-in-fa-during-the-onset-of-reproduction-when-excluding-p4" class="level3">
+<h3 class="anchored" data-anchor-id="are-there-sex-differences-in-fa-during-the-onset-of-reproduction-when-excluding-p4">Are there sex differences in FA during the onset of reproduction when excluding P4?</h3>
+<p>Menarche (~4.3 years) and first reproduction (~6.1 years) both precede third molar eruption (~6.8 years), making M3 a proxy for reproductive stress. When premolars are excluded from the comparison, there are no significant differences in FA between M3 and other molar teeth, in either the pooled or length-only test (Table 1). Figure 6 suggests that males may experience greater stress during the reproductive period, evidenced by higher FA10b values for third molars, but this trend does not reach significance.</p>
+<p><strong>Figure 6. FA10b deviation from group mean comparing third molar to other molar teeth (excluding P4).</strong></p>
+<p><img src="revised-fig-reproduction.png" class="img-fluid"></p>
+<p><strong>Interpretation:</strong> Reproductive onset is not a uniquely stressful period relative to other molar life history stages. Males trend slightly higher than females, mirroring the weaning pattern, but the difference is not significant. The symmetric non-significant results for weaning and reproduction, combined with the significant premolar finding, consistently point to the juvenile period rather than either life history transition as the primary developmental stressor.</p>
+<hr>
+</section>
+</section>
+<section id="study-design" class="level2">
+<h2 class="anchored" data-anchor-id="study-design">Study Design</h2>
+<p><strong>Table 1. Results of Levene’s Tests.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Hypothesis</th>
+<th>df1</th>
+<th>df2</th>
+<th>F</th>
+<th>p</th>
+<th>sig</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Premolar &gt; FA (pooled)</td>
+<td>1</td>
+<td>28</td>
+<td>39.09</td>
+<td>&lt; 0.001</td>
+<td>*</td>
+</tr>
+<tr class="even">
+<td>Weaning (pooled)</td>
+<td>1</td>
+<td>21</td>
+<td>1.78</td>
+<td>0.196</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Reproduction (pooled)</td>
+<td>1</td>
+<td>21</td>
+<td>0.37</td>
+<td>0.547</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Premolar &gt; FA (lengths only)</td>
+<td>1</td>
+<td>14</td>
+<td>48.70</td>
+<td>&lt; 0.001</td>
+<td>*</td>
+</tr>
+<tr class="odd">
+<td>Weaning (lengths only)</td>
+<td>1</td>
+<td>10</td>
+<td>0.02</td>
+<td>0.891</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Reproduction (lengths only)</td>
+<td>1</td>
+<td>10</td>
+<td>0.32</td>
+<td>0.585</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data Source:</strong> Natural death sample of olive baboon (<em>Papio anubis</em>) skulls collected at Gashaka Gumti National Park (GGNP), northeastern Nigeria, between 2008 and 2013 by the Gashaka Primate Project. Skulls were delivered by local residents and park rangers; specimens with evidence of human-caused death were excluded. Weathering stages (0–2) indicate deposition over approximately six years.</p>
+<p><strong>Data Handling:</strong> Age was assessed by tooth developmental stage and basilar suture development; sex was assessed visually by skull morphology. Standard maximum length and breadth measurements were taken 10 times on permanent mandibular and maxillary premolar and molar teeth (excluding the maxillary third premolar due to canine honing). The final dataset included up to nine variables per individual. All measurements were screened for: (1) measurement error (ME), assessed across replicate sets using the ME3 formula; (2) directional asymmetry (DA), identified by significant skew; (3) antisymmetry, identified by platykurtic or bimodal distributions; and (4) trait size dependency, tested by correlation between mean trait size and mean side difference. All pipeline decisions are documented in the scripts. The revised pipeline retained more variables than the original published analysis due to the replacement of Rosner’s ESD with Dixon’s test and the correction of the skew and kurtosis calculations.</p>
+<p><strong>Analytical Approach:</strong></p>
+<ol type="1">
+<li>Assessed ME across all ten replicate sets; selected the full set of 10 replicates (lowest mean ME, 8%) for analysis.</li>
+<li>Screened all variables for DA, antisymmetry, outliers, and trait size dependency; eliminated variables that failed screening.</li>
+<li>Calculated FA10b index (log-transformed FA10a) for all retained variables by sex and tooth position; Figure 7 shows FA10b plotted against percent ME to illustrate the value of ME correction.</li>
+<li>Explored FA trends across dimension (length vs.&nbsp;breadth), tooth class, and arcade using Levene’s test, pooled and by sex.</li>
+<li>Tested sex differences in FA using Levene’s test with a sex-by-dimension interaction (FA10b ~ sex * dimension).</li>
+<li>Tested whether premolar lengths are significantly higher than molar lengths (Levene’s test: FA10b ~ class) on lengths only and pooled.</li>
+<li>Tested weaning stress using Levene’s test on M1 vs.&nbsp;all other molar teeth (premolars excluded), pooled and lengths only.</li>
+<li>Tested reproductive stress using Levene’s test on M3 vs.&nbsp;all other molar teeth (premolars excluded), pooled and lengths only.</li>
+</ol>
+<p><strong>Figure 7. FA10b plotted against percent ME by tooth, showing the effect of ME correction on the FA signal.</strong></p>
+<p><img src="revised-fig-percentME.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="project-resources" class="level2">
+<h2 class="anchored" data-anchor-id="project-resources">Project Resources</h2>
+<p><strong>Repository:</strong></p>
+<ul>
+<li><a href="https://github.com/kchoover14/baboon-stress">kchoover14/baboon-stress</a></li>
+</ul>
+<p><strong>Data:</strong></p>
+<ul>
+<li>Dental measurement data collected by Emily Gelipter at the Gashaka Primate Project research station, GGNP, Nigeria; included in repo.</li>
+</ul>
+<p><strong>Code:</strong></p>
+<ul>
+<li><code>revised1-wrangling.R</code> – converts raw Excel replicate sheets to pipeline-ready long-format CSV</li>
+<li><code>revised2-inspection.R</code> – data inspection: ME assessment, outlier removal, DA and antisymmetry tests, trait size dependency</li>
+<li><code>revised3-analysis.R</code> – FA10b calculation, hypothesis testing, life history comparisons, and figure generation</li>
+</ul>
+<p><strong>Project Artifacts:</strong></p>
+<ul>
+<li>Figures (n=7): side difference distributions, FA10b by dimension, sex differences, juvenile period (P4), weaning, reproduction, FA10b vs.&nbsp;percent ME</li>
+<li><code>2021-hoover_et_al-developmental_instability_in_wild_Nigerian_olive_baboons.pdf</code> – open-access published paper (CC BY 4.0)</li>
+</ul>
+<p><strong>Environment:</strong></p>
+<ul>
+<li><code>renv.lock</code> and <code>renv/</code> – restore with <code>renv::restore()</code></li>
+</ul>
+<p><strong>License:</strong></p>
+<ul>
+<li><p>Code and scripts © Kara C. Hoover, licensed under the <a href="LICENSE">MIT License</a>.</p></li>
+<li><p>Data, figures, and written content © Kara C. Hoover, licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p></li>
+</ul>
+<hr>
+</section>
+<section id="tools-technologies" class="level2">
+<h2 class="anchored" data-anchor-id="tools-technologies">Tools &amp; Technologies</h2>
+<p><strong>Languages</strong> | R</p>
+<p><strong>Tools</strong> | RStudio | GitHub</p>
+<p><strong>Packages</strong> | dplyr | tidyr | readr | readxl | openxlsx | ggplot2 | ggridges | gridExtra | cowplot | plotly | htmlwidgets | car | outliers | DescTools | Hmisc | coin</p>
+<hr>
+</section>
+<section id="expertise" class="level2">
+<h2 class="anchored" data-anchor-id="expertise">Expertise</h2>
+<p><strong>Domain Expertise:</strong> biological anthropology | primatology | bioarchaeology | developmental stress | life history theory | fluctuating asymmetry</p>
+<p><strong>Transferable Expertise:</strong> Demonstrates the application of variance-based statistical methods to biological signal extraction in noisy field data, including systematic measurement error assessment and multi-stage data quality screening – skills applicable wherever measurement reliability and signal integrity are critical.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

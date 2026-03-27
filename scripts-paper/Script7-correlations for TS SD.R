@@ -7,7 +7,7 @@ library(readxl)
 library(coin)
 
 #female breadths
-tsafb=read_excel("tsa.xlsx", sheet="femb")
+tsafb=read_excel("data-paper/tsa.xlsx", sheet="femb")
 spearman_test(mnm1_sd~mnm1av, tsafb)
 spearman_test(mnm2_sd~mnm2av, tsafb)
 spearman_test(mnm3_sd~mnm3av, tsafb)
@@ -19,7 +19,7 @@ spearman_test(mxp3_sd~mxp3av, tsafb)
 spearman_test(mxp4_sd~mxp4av, tsafb)
 
 #female lengths
-tsafl=read_excel("tsa.xlsx", sheet="feml")
+tsafl=read_excel("data-paper/tsa.xlsx", sheet="feml")
 spearman_test(mnm1_sd~mnm1av, tsafl)
 spearman_test(mnm2_sd~mnm2av, tsafl)
 spearman_test(mnm3_sd~mnm3av, tsafl)
@@ -31,7 +31,7 @@ spearman_test(mxp3_sd~mxp3av, tsafl)
 spearman_test(mxp4_sd~mxp4av, tsafl)
 
 #male breadths
-tsamb=read_excel("tsa.xlsx", sheet="maleb")
+tsamb=read_excel("data-paper/tsa.xlsx", sheet="maleb")
 spearman_test(mnm1_sd~mnm1av, tsamb)
 spearman_test(mnm2_sd~mnm2av, tsamb)
 spearman_test(mnm3_sd~mnm3av, tsamb)
@@ -43,7 +43,7 @@ spearman_test(mxp3_sd~mxp3av, tsamb)
 spearman_test(mxp4_sd~mxp4av, tsamb)
 
 #male lengths
-tsaml=read_excel("tsa.xlsx", sheet="malel")
+tsaml=read_excel("data-paper/tsa.xlsx", sheet="malel")
 spearman_test(mnm1_sd~mnm1av, tsaml)
 spearman_test(mnm2_sd~mnm2av, tsaml)
 spearman_test(mnm3_sd~mnm3av, tsaml)
@@ -53,3 +53,19 @@ spearman_test(mxm2_sd~mxm2av, tsaml)
 spearman_test(mxm3_sd~mxm3av, tsaml)
 spearman_test(mxp3_sd~mxp3av, tsaml)
 spearman_test(mxp4_sd~mxp4av, tsaml)
+
+
+#modified for getting ridgeline plot in revised
+
+# 1) Remove mxp4 from male lengths
+tsaml <- tsaml %>% select(-contains("mxp4"))
+
+# 2) Join all four objects into one long file
+tsa <- bind_rows(
+    tsafb %>% mutate(sex = "female", dimension = "breadth"),
+    tsafl %>% mutate(sex = "female", dimension = "length"),
+    tsamb %>% mutate(sex = "male",   dimension = "breadth"),
+    tsaml %>% mutate(sex = "male",   dimension = "length")
+)
+
+write_csv(tsa, "data-paper/tsa-final.csv")

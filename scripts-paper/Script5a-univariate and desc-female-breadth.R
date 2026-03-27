@@ -1,10 +1,8 @@
-options(prompt="R>", scipen=100, digits=4)
-
 #This script generates univariate and descriptive values for female breadths for the PS worksheet
 
 #univariates
 library(readxl)
-femb=read_excel("0-reps-10-postFA.xlsx", sheet="female-breadths")
+femb=read_excel("data-paper/0c-reps-10-postFA.xlsx", sheet="female-breadths")
 cat(paste("\n", "MNM1", "\n"))
 summary(aov(mnm1 ~ Side + Side*Ind + Error(Ind/(Side*Ind)), data=femb))
 cat(paste("\n", 'MNM2', "\n"))
@@ -25,7 +23,6 @@ cat(paste("\n", 'MXP4', "\n"))
 summary(aov(mxp4 ~ Side + Side*Ind + Error(Ind/(Side*Ind)), data=femb))
 
 #Average all replicates for descriptives
-library(readxl)
 library(dplyr)
 library(tidyr)
 femb$Ind=as.factor(femb$Ind)
